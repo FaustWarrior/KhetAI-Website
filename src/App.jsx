@@ -9,8 +9,8 @@ import { InputWSearch } from "./components/InputWSearch";
 
 function App() {
   const [selectedLocation, setSelectedLocation] = useState({
-    lat: 28.7041,
-    lng: 77.1025,
+    lat: 18.5204,
+    lng: 73.8567,
   });
 
   return (
