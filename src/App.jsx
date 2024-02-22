@@ -5,7 +5,7 @@ import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testi
 import SearchLocationInput from "./components/GooglePlacesApi";
 import MapComponent from "./components/Map";
 import { InputWSearch } from "./components/InputWSearch";
-
+import ChatBot from "./components/ChatBot";
 
 function App() {
   const [selectedLocation, setSelectedLocation] = useState({
@@ -33,6 +33,7 @@ function App() {
         <Business />
         <Billing />
         <CardDeal />
+        <ChatBot />
         <Testimonials />
         <InputWSearch />
         <Clients />
