@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { REACT_APP_GOOGLE_MAPS_KEY } from "../constants/constants";
+import Button from "./Button";
 
 let autoComplete;
 
@@ -65,7 +66,7 @@ const SearchLocationInput = ({ setSelectedLocation }) => {
 
   return (
     <div className="search-location-input w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
-      <label className="font-poppins font-normal text-center text-[18px] leading-[27px] text-white">Type in your suburb or postcode</label>
+      <label className="font-poppins font-normal text-center text-[28px] leading-[27px] text-white">Type in your suburb or postcode</label>
       <input
         ref={autoCompleteRef}
         className="form-control"
@@ -73,6 +74,7 @@ const SearchLocationInput = ({ setSelectedLocation }) => {
         placeholder="Search Places ..."
         value={query}
       />
+      <Button styles={`mt-10`} />
     </div>
     
   );

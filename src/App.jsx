@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 import styles from "./style";
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
+import { Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
 import SearchLocationInput from "./components/GooglePlacesApi";
 import MapComponent from "./components/Map";
 import { InputWSearch } from "./components/InputWSearch";
-
+import ChatBot from "./components/ChatBot";
 
 function App() {
   const [selectedLocation, setSelectedLocation] = useState({
@@ -31,15 +31,16 @@ function App() {
        <div className={`${styles.boxWidth}`}>
         <Stats />
         <Business />
-        <Billing />
-        <CardDeal />
+        <SearchLocationInput setSelectedLocation={setSelectedLocation} />
+        <MapComponent selectedLocation={selectedLocation} />
         <Testimonials />
+        <ChatBot />
+        <CardDeal />
         <InputWSearch />
         <Clients />
         <CTA />
         <Footer />
-        <SearchLocationInput setSelectedLocation={setSelectedLocation} />
-        <MapComponent selectedLocation={selectedLocation} />
+        
        </div>
      </div>
    </div>
