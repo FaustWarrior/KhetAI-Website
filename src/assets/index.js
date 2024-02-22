@@ -23,6 +23,12 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
+import Wheat from "./Wheat.jpeg";
+import potato from "./potato.jpg";
+import Maize from "./Ears-corn.webp";
+import download from "./download.jpeg";
+import Rice from "./Bowl-of-white-rice-db42d1f.jpg";
+import tomato from "./tomato.jpeg";
 
 export {
   airbnb,
@@ -50,4 +56,10 @@ export {
   people01,
   people02,
   people03,
+  Wheat,
+  potato,
+  Maize,
+  tomato,
+  download,
+  Rice
 };

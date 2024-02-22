@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, Wheat, Rice, download, Maize, potato, tomato} from "../assets";
 
 export const navLinks = [
   {
@@ -47,26 +47,50 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
-    title: "Founder & Leader",
-    img: people01,
+      "Wheat is a cereal grain widely cultivated for its edible seeds, serving as a staple food in many diets globally.",
+    name: "Wheat",
+    title: "Mild winters, moderate rainfall, and well-drained soil",
+    img: Wheat,
   },
   {
     id: "feedback-2",
     content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
-    title: "Founder & Leader",
-    img: people02,
+      "Rice, a staple food, is a cereal grain grown worldwide. It's a primary source of nutrition for billions of people.",
+    name: "Rice",
+    title: "Warm and humid.",
+    img: Rice,
   },
   {
     id: "feedback-3",
     content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
-    title: "Founder & Leader",
-    img: people03,
+      "Sugarcane, a tall perennial grass, is a primary source of sugar production and a key crop in many tropical regions.",
+    name: "Sugarcane",
+    title: "Warm and tropical.",
+    img: download,
+  },
+  {
+    id: "feedback-3",
+    content:
+      "Maize, or corn, is a cereal grain cultivated globally for food, feed, and industrial use, with diverse culinary and economic significance.",
+    name: "Maize",
+    title: "Warm and well-distributed rainfall.",
+    img: Maize,
+  },
+  {
+    id: "feedback-3",
+    content:
+      "Tomato, a versatile fruit, is rich in nutrients and used in various cuisines worldwide, prized for its flavor and texture.",
+    name: "Tomato",
+    title: "Warm and sunny with moderate humidity.",
+    img: tomato,
+  },
+  {
+    id: "feedback-3",
+    content:
+      "Potato, a starchy tuber, is a versatile crop widely consumed worldwide. It's rich in carbohydrates and essential nutrients, cultivated in diverse climates.",
+    name: "Potato",
+    title: "Cool, temperate, well-drained, moderate rainfall.",
+    img: potato,
   },
 ];
 

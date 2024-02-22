@@ -34,11 +34,11 @@ function App() {
         <Billing />
         <CardDeal />
         <Testimonials />
+        <InputWSearch />
         <Clients />
         <CTA />
         <Footer />
         <SearchLocationInput setSelectedLocation={setSelectedLocation} />
-        <InputWSearch />
         <MapComponent selectedLocation={selectedLocation} />
        </div>
      </div>
