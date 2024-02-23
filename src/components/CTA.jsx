@@ -12,7 +12,9 @@ const CTA = () => (
     </div>
 
     <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
-      <Button />
+      <a href="https://apps.sentinel-hub.com/eo-browser/?zoom=10&lat=41.9&lng=12.5&themeId=DEFAULT-THEME&toTime=2024-02-23T09%3A28%3A29.701Z">
+        <Button buttonText="Get Started"/>
+      </a>
     </div>
   </section>
 );

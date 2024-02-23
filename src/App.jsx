@@ -4,7 +4,6 @@ import styles from "./style";
 import { Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
 import SearchLocationInput from "./components/GooglePlacesApi";
 import MapComponent from "./components/Map";
-import { InputWSearch } from "./components/InputWSearch";
 import ChatBot from "./components/ChatBot";
 
 function App() {
@@ -36,7 +35,6 @@ function App() {
         <Testimonials />
         <ChatBot />
         <CardDeal />
-        <InputWSearch />
         <Clients />
         <CTA />
         <Footer />

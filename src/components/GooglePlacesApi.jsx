@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { REACT_APP_GOOGLE_MAPS_KEY } from "../constants/constants";
-import Button from "./Button";
+import styles from '../style';
+
 
 let autoComplete;
 
@@ -57,6 +58,38 @@ const SearchLocationInput = ({ setSelectedLocation }) => {
     setSelectedLocation(latLng);
   };
 
+  const getCurrentLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          const latLng = {
+            lat: latitude,
+            lng: longitude
+          };
+          const geocoder = new window.google.maps.Geocoder();
+          geocoder.geocode({ location: latLng }, (results, status) => {
+            if (status === "OK") {
+              if (results[0]) {
+                setQuery(results[0].formatted_address);
+                setSelectedLocation(latLng);
+              } else {
+                console.error("No results found");
+              }
+            } else {
+              console.error("Geocoder failed due to: " + status);
+            }
+          });
+        },
+        (error) => {
+          console.error("Error getting current location:", error);
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+    }
+  };
+
   useEffect(() => {
     loadScript(
       `https://maps.googleapis.com/maps/api/js?key=${REACT_APP_GOOGLE_MAPS_KEY}&libraries=places`,
@@ -66,15 +99,15 @@ const SearchLocationInput = ({ setSelectedLocation }) => {
 
   return (
     <div className="search-location-input w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
-      <label className="font-poppins font-normal text-center text-[28px] leading-[27px] text-white">Type in your suburb or postcode</label>
+      <label className={styles.heading2}>Type in your suburb or postcode</label>
       <input
         ref={autoCompleteRef}
-        className="form-control"
+        className="form-control w-3/12 py-2 px-4 border border-blue-300 rounded-lg focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-colors duration-300 ease-in-out hover:border-blue-500 hover:bg-blue-100"
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Search Places ..."
         value={query}
       />
-      <Button styles={`mt-10`} />
+      <button class="button-29 w-3/12 " onClick={getCurrentLocation}>Current Location</button>
     </div>
     
   );

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import styles from '../style';
-import { IconButton } from '@chakra-ui/react';
-import { MdMic } from 'react-icons/md';
+import "./Button.css"
 
 function ChatBot() {
     const [inputText, setInputText] = useState('');
@@ -42,13 +41,10 @@ function ChatBot() {
             <div>
                 <form onSubmit={handleSubmit}>
                     <h2 className={styles.heading2}>Ask your queries regarding Crops here with AI Assistant</h2>
-                    <input type="text" value={inputText} onChange={(e) => setInputText(e.target.value)} />
-                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 ml-10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Send</button>
+                    <input type="text" className='w-5/12 py-2 px-4 border border-blue-300 rounded-lg focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-colors duration-300 ease-in-out hover:border-blue-500 hover:bg-blue-100' value={inputText} onChange={(e) => setInputText(e.target.value)} />
+                    <button class="button-29">Send</button>
                 </form>
-                <p className={`${styles.paragraph} max-w-[470px] mt-5`}>{response}</p>
-            </div>
-            <div>
-                
+                <p className={`${styles.paragraph} w-full font-semibold text-green-200 hover:text-green-400 mt-5 `}>{response}</p>
             </div>
 
         </div>
@@ -58,3 +54,7 @@ function ChatBot() {
 
 
 export default ChatBot
+
+
+
+

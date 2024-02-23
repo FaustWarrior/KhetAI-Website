@@ -2,9 +2,18 @@ import React, {useState} from "react";
 import { feedback } from "../constants";
 import styles from "../style";
 import FeedbackCard from "./FeedbackCard";
+import "./Button.css"
 
 function Testimonials() {
   const [showFeedback, setShowFeedback] = useState(false);
+
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
 
   const toggleFeedback = () => {
     setShowFeedback(!showFeedback);
@@ -27,10 +36,10 @@ function Testimonials() {
     </div>
 
     <div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
-    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" onClick={toggleFeedback}>Show Feedback</button>
+    <button class="button-29" onClick={toggleFeedback}>Show Feedback</button>
       {showFeedback && (
         <div className="feedback-container">
-          {feedback.map((card) => 
+          {shuffleArray (feedback).slice(0,3).map((card) =>
             <FeedbackCard key={card.id} {...card} />
           )}
         </div>
@@ -45,3 +54,8 @@ function Testimonials() {
 }
 
 export default Testimonials;
+
+
+// {feedback.map((card) => 
+//   <FeedbackCard key={card.id} {...card} />
+// )}

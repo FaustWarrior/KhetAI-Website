@@ -23,10 +23,10 @@ const MapComponent = ({ selectedLocation }) => {
             height: "500px", width: "500px"
           }}
           center={selectedLocation}
-          zoom={13}
+          zoom={15}
           options={{
-            zoomControl: false,
-            mapTypeControl: true,
+            zoomControl: true,
+            mapTypeControl: false,
             fullscreenControl: false,
             mapTypeId: 'hybrid'
           }}

@@ -16,7 +16,7 @@ function CardDeal(){
         aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau.
       </p>
 
-      <Button styles={`mt-10`} />
+      <Button styles={`mt-10`} buttonText="Feedback" />
     </div>
 
     <div className={layout.sectionImg}>
