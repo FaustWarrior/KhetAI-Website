@@ -28,11 +28,21 @@ const SearchLocationInput = ({ setSelectedLocation }) => {
   const [query, setQuery] = useState("");
   const autoCompleteRef = useRef(null);
 
+  const maharashtraBounds = {
+    north: 21.971,
+    south: 15.602,
+    west: 72.566,
+    east: 80.875
+  };
+
   const handleScriptLoad = (updateQuery, autoCompleteRef) => {
     autoComplete = new window.google.maps.places.Autocomplete(
       autoCompleteRef.current,
       {
-        // types: ["(cities)"],
+        
+        strictBounds: true,
+        types: ['geocode'],
+        bounds: maharashtraBounds,
         componentRestrictions: { country: "IN" },
       }
     );

@@ -56,6 +56,16 @@ function Testimonials() {
 export default Testimonials;
 
 
-// {feedback.map((card) => 
-//   <FeedbackCard key={card.id} {...card} />
-// )}
+
+
+
+
+
+
+
+
+
+
+
+
+
