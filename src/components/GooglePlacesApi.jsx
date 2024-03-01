@@ -109,7 +109,7 @@ const SearchLocationInput = ({ setSelectedLocation }) => {
 
   return (
     <div className="search-location-input w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
-      <label className={styles.heading2}>Type in your suburb or postcode</label>
+      <label className={styles.heading2}>Share your Farm's location</label>
       <input
         ref={autoCompleteRef}
         className="form-control w-3/12 py-2 px-4 border border-blue-300 rounded-lg focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-colors duration-300 ease-in-out hover:border-blue-500 hover:bg-blue-100"

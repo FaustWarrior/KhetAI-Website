@@ -14,20 +14,20 @@ function App() {
 
   return (
     <div className="bg-primary w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-       <div className={`${styles.boxWidth}`}>
+    <div className="w-full">
+       <div className="pe-8 pr-7 ">
          <Navbar />
        </div>
      </div>
 
-     <div className={`bg-primary ${styles.flexStart}`}>
-       <div className={`${styles.boxWidth}`}>
+     <div className="w-full px-8">
+       <div className="pe-8 pr-7 ">
          <Hero />
        </div>
      </div>
     
-     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-       <div className={`${styles.boxWidth}`}>
+     <div className="w-full px-8">
+       <div className="pe-8 pr-7">
         <Stats />
         <Business />
         <SearchLocationInput setSelectedLocation={setSelectedLocation} />

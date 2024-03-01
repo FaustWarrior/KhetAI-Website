@@ -22,13 +22,11 @@ const Business = () =>  (
   <section id="features" className={layout.section}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        We are uniting <br className="sm:block hidden" /> agriculture-humanity's first 
-        technology with the most advanced ones.
+      Fusing Remote Sensing <br className="sm:block hidden" />and Deep Learning to <br className="sm:block hidden" />help 
+      Farmers with
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        With the right credit card, you can improve your financial life by
-        building credit, earning rewards and saving money. But with hundreds
-        of credit cards on the market.
+      Pellentesque dignissim enim sit amet venenatis urna. Venenatis lectus magna fringilla urna porttitor rhoncus dolor. Penatibus et magnis dis parturient montes. In hac habitasse platea dictumst quisque sagittis purus sit. Bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim
       </p>
 
       <Button styles={`mt-10`} buttonText="Submit" />
